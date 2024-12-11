@@ -1,47 +1,46 @@
 {
-  "name": "files_manager", // Name of the project
-  "version": "1.0.0", // Version of the project
-  "description": "", // Project description (currently empty)
-  "main": "index.js", // Entry point for the project (main file)
+  "name": "files_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint", // Linting command to check the code quality using ESLint
-    "check-lint": "lint [0-9]*.js", // Linting command for files with a specific pattern (e.g., [0-9]*.js)
-    "start-server": "nodemon --exec babel-node --presets @babel/preset-env ./server.js", // Start server with Babel support, using nodemon for auto-reload
-    "start-worker": "nodemon --exec babel-node --presets @babel/preset-env ./worker.js", // Start worker with Babel support, using nodemon for auto-reload
-    "dev": "nodemon --exec babel-node --presets @babel/preset-env", // Start the development environment with Babel and nodemon
-    "test": "./node_modules/.bin/mocha --require @babel/register --exit" // Run tests using Mocha with Babel support and exit after tests complete
+    "lint": "./node_modules/.bin/eslint",
+    "check-lint": "lint [0-9]*.js",
+    "start-server": "nodemon --exec babel-node --presets @babel/preset-env ./server.js",
+    "start-worker": "nodemon --exec babel-node --presets @babel/preset-env ./worker.js",
+    "dev": "nodemon --exec babel-node --presets @babel/preset-env",
+    "test": "./node_modules/.bin/mocha --require @babel/register --exit"
   },
-  "author": "", // Author of the project (currently empty)
-  "license": "ISC", // License type for the project (ISC license)
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "bull": "^3.16.0", // Bull for background job processing with Redis
-    "chai-http": "^4.3.0", // Chai HTTP for testing HTTP requests in the tests
-    "express": "^4.17.1", // Express.js framework for building APIs
-    "image-thumbnail": "^1.0.10", // Package to generate image thumbnails
-    "mime-types": "^2.1.27", // For working with mime types (e.g., file type identification)
-    "mongodb": "^3.5.9", // MongoDB client for interacting with MongoDB databases
-    "redis": "^2.8.0", // Redis client for interacting with Redis (used for queues, etc.)
-    "sha1": "^1.1.1", // SHA-1 hashing library
-    "uuid": "^8.2.0" // UUID generation library for unique identifiers
+    "bull": "^3.16.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1",
+    "image-thumbnail": "^1.0.10",
+    "mime-types": "^2.1.27",
+    "mongodb": "^3.5.9",
+    "redis": "^2.8.0",
+    "sha1": "^1.1.1",
+    "uuid": "^8.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.0", // Babel CLI for running Babel-based commands
-    "@babel/core": "^7.21.0", // Core Babel package for transforming ES6+ code to ES5
-    "@babel/node": "^7.8.0", // Babel Node for running scripts with Babel in the Node.js environment
-    "@babel/preset-env": "^7.20.2", // Babel preset for compiling modern JavaScript to be compatible with older environments
-    "@babel/register": "^7.8.0", // Registers Babel for runtime compilation of JavaScript files
-    "babel-jest": "^29.5.0", // Babel integration for Jest testing framework
-    "chai": "^4.2.0", // Assertion library for testing
-    "chai-http": "^4.3.0", // HTTP plugin for Chai for testing HTTP requests
-    "eslint": "^6.8.0", // Linter for JavaScript, helps enforce code style and quality
-    "eslint-config-airbnb-base": "^14.0.0", // Airbnb's ESLint base configuration (without React rules)
-    "eslint-plugin-import": "^2.18.2", // ESLint plugin for enforcing import/export syntax
-    "eslint-plugin-jest": "^22.17.0", // ESLint plugin for Jest testing framework
-    "jest": "^29.5.0", // Testing framework for unit and integration testing
-    "mocha": "^6.2.2", // Testing framework, commonly used for server-side testing
-    "nodemon": "^2.0.2", // Development tool that automatically restarts the server when code changes
-    "request": "^2.88.0", // HTTP request library, used for making HTTP calls in tests or the app
-    "sinon": "^7.5.0" // Test spies, stubs, and mocks for JavaScript testing
+    "@babel/cli": "^7.8.0",
+    "@babel/core": "^7.21.0",
+    "@babel/node": "^7.8.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.8.0",
+    "babel-jest": "^29.5.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "jest": "^29.5.0",
+    "mocha": "^6.2.2",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.0",
+    "sinon": "^7.5.0"
   }
 }
-
